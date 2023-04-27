@@ -25,6 +25,9 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    if (!project.hasProperty("android.buildCacheDir")) {
+        namespace "com.example.libphonenumber_plugin"
+    }
     compileSdkVersion 31
 
     compileOptions {
